@@ -9,7 +9,7 @@
 </head>
 
 <body>
-   
+    <audio id='pulo' src="assets/sons/Mario Jump 2 - QuickSounds.com.mp3"  ></audio>
     <header>
        <div class="container">
         <H1>LOGIAGAME</H1>
@@ -34,6 +34,7 @@
         <a onclick="inicio()"> <H1 id="titulo_mito">M I T O L O G I A</H1></a> 
        
       <div  id="item_sumir1" class="item">
+     
         <span class="titulo"  onclick="mitologia()">MITOLOGIA?</span> <br>
         <div id="introducao1" style = "display:none">
             A mitologia é um sistema de crenças composta por uma série de narrativas chamadas de mito. Essas histórias buscam explicar tudo o que existe e é importante para uma sociedade.
@@ -102,6 +103,7 @@
   
     
 <audio id=audio src="assets/sons/Stage Win (Super Mario) - QuickSounds (mp3cut.net).mp3"  loop  ></audio>
+
 </div> 
 
 <script>
@@ -120,6 +122,9 @@
    }
  
     function inicio(){
+        var play = pulo
+    play.play()
+
     titulo_mito.style.display ="none"
     item_sumir1.style.display ="block"
     item_sumir2.style.display ="block"
@@ -128,7 +133,8 @@
     }
     
     function mitologia(){
-    
+        var play = pulo
+    play.play()
     introducao1.style.display = 'block'
     introducao2a.style.display = "none"
      introducao2b.style.display = "none"
@@ -137,7 +143,8 @@
    
     }
     function principais(){
-    
+        var play = pulo
+    play.play()
      introducao1.style.display = "none"
      introducao2a.style.display = "block"
      introducao2b.style.display = "block"
@@ -145,6 +152,8 @@
      introducao4.style.display = "none"
      }
      function curiosidades(){
+        var play = pulo
+    play.play()
     
     introducao1.style.display = "none"
      introducao2a.style.display = "none"
@@ -153,6 +162,8 @@
      introducao4.style.display = "none"
      }
    function midia(){
+    var play = pulo
+    play.play()
     
     introducao1.style.display = "none"
      introducao2a.style.display = "none"
