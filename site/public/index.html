@@ -7,23 +7,30 @@
     <title>page</title>
     <link rel="stylesheet" href="../public/index.css">
 </head>
+
 <body>
+   
     <header>
        <div class="container">
         <H1>LOGIAGAME</H1>
         <DIV class="navbar">
             <ul>
+         
+         
                <li> 
                 CADASTRA-SE
                 </li> 
                 <li>
                 LOGIN
                 </li>
+                <li  id="ativo" onclick="playaudio() "style="display:block">🔈</li>
+                <li id="pausado"  onclick="pauseaudio() "style= "display:none">🔊</li>
             </ul>
         </DIV>
       </div>
     </header> <br>
     <div class="banner">
+        
         <a onclick="inicio()"> <H1 id="titulo_mito">M I T O L O G I A</H1></a> 
        
       <div  id="item_sumir1" class="item">
@@ -91,11 +98,26 @@
         autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similiqo, aliquid praesentium  Lorem ipsum dolor sit amet    consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet img  
         autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similiqo, aliquid praesentium 
        </div>
-    </div> 
+    </div>  
+  
+    
+<audio id=audio src="assets/sons/Stage Win (Super Mario) - QuickSounds (mp3cut.net).mp3"  loop  ></audio>
 </div> 
 
-
 <script>
+   function playaudio(){ 
+    var play = audio
+    play.play()
+     pausado.style.display="block"
+    ativo.style.display="none"
+
+   }
+   function pauseaudio(){
+    var mudo = audio
+   mudo.pause()
+     pausado.style.display="none"
+     ativo.style.display="block"
+   }
  
     function inicio(){
     titulo_mito.style.display ="none"
