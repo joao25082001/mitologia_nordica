@@ -114,19 +114,19 @@
         <div id="item_sumir4" class="item">
             <span class="titulo" onclick="midia()">FILMES E SERIES</span> <br>
             <div id="introducao4" style="display:none">
-             
-                  
-                    <div class="imgs">
-                        <button id="prev_button"> a</button>
 
-                        <a href="https://www.adorocinema.com/filmes/filme-191035/">
-                            <img src="assets/imgs/filmes_1356_Percy-Jackson-e-o-Mar-de-Monstros-Poster.jpg" style = "display:none" alt="">
-                        </a>
 
-                        <a href="https://www.netflix.com/br/title/70301870">
-                            <img class="fotos" src="assets/imgs/vikings.jfif" style = "display:none" alt="">
+                <div class="imgs">
+                    <img src="assets/imgs/esquerda.png"  class = "button" onclick="voltar()" alt="">
+
+
+                    <div id=resultado>
+                        <a href="https://www.cinemaepipoca.com.br/os-cavaleiros-zodiaco-lenda-santuario/">
+                            <img class="fotos" src="assets/imgs/filmes_3379_oscavaleirosdozodiacoposter001.jpg"  alt="">
                         </a>
-                        <a href="https://www.adorocinema.com/filmes/filme-193108/">
+                    </div>
+                    
+                      <!--   <a href="https://www.adorocinema.com/filmes/filme-193108/">
                             <img class="fotos" src="assets/imgs/filmes_1426_Thor2-Poster.jpg" style = "display:none" alt="">
                         </a>
                         <a href="https://www.cinemaepipoca.com.br/os-cavaleiros-zodiaco-lenda-santuario/">
@@ -150,17 +150,16 @@
                         </a>
                         <a href="https://www.imdb.com/title/tt0862467/">
                             <img class="fotos" src="assets/imgs/valhalla_rising.jfif" style = "display:none" alt="">
-                        </a>
-                        <button id="next_button">a
-                        </button>
-                    </div>
-                 
+                        </a> -->
+                    <img src="assets/imgs/direita.png" class = "button" onclick="passar()" alt="">
                 </div>
+
             </div>
         </div>
+    </div>
 
 
-        <audio id=audio src="assets/sons/SuperMarioBros.mp3" preload="auto" loop></audio>
+    <audio id=audio src="assets/sons/SuperMarioBros.mp3" preload="auto" loop></audio>
 
     </div>
 
@@ -217,6 +216,29 @@
 
             introducao4.style.display = "none"
         }
+        var vetor = [`<a href="https://www.adorocinema.com/filmes/filme-191035/">
+                    <img src="assets/imgs/filmes_1356_Percy-Jackson-e-o-Mar-de-Monstros-Poster.jpg" class="fotos" alt="">
+                </a>`, ` <a href="https://www.adorocinema.com/filmes/filme-193108/">
+                    <img class="fotos" src="assets/imgs/filmes_1426_Thor2-Poster.jpg" alt="">
+                </a>`, `  <a href="https://www.cinemaepipoca.com.br/os-cavaleiros-zodiaco-lenda-santuario/">
+                    <img class="fotos" src="assets/imgs/filmes_3379_oscavaleirosdozodiacoposter001.jpg" alt="">
+                </a>`, ` <a href="https://www.imdb.com/title/tt11138512/">
+                    <img class="fotos" src="assets/imgs/the_norman.jfif" style = "display:block" alt="">
+                </a>`, ` <a href="https://www.adorocinema.com/filmes/filme-138335/">
+                    <img class="fotos" src="assets/imgs/hercules.jfif" alt="">
+                </a>`, `  <a
+                href="https://www.amazon.com.br/ladr%C3%A3o-raios-Percy-Jackson-Olimpianos-ebook/dp/B009M84O0S">
+                <img class="fotos" src="assets/imgs/Percy_Jackson.jfif" alt="">
+            </a>`, `<a href="https://www.netflix.com/br/title/80232926">
+                <img class="fotos" src="assets/imgs/ragnarok.jfif" alt="">
+            </a>`, `<a href="https://www.netflix.com/br/title/80074249">
+                <img class="fotos" src="assets/imgs/The_Last_Kingdom.jfif" alt="">
+            </a>`, `<a href="https://www.imdb.com/title/tt0862467/">
+                <img class="fotos" src="assets/imgs/valhalla_rising.jfif" alt="">
+            </a>`, ` <a href="https://www.netflix.com/br/title/70301870">
+                <img class="fotos" src="assets/imgs/vikings.jfif" alt="">
+            </a>`]
+        var posicao = 0
         function midia() {
             var play = pulo
             play.play()
@@ -227,7 +249,25 @@
             introducao4.style.display = "block"
         }
 
-       
+        function voltar() {
+            if(posicao == 0){
+            posicao = vetor.length-1
+           }
+           resultado.innerHTML = vetor[posicao-1]
+           posicao --
+        
+                
+        }
+        function passar(){
+            resultado.innerHTML = vetor[posicao]
+            posicao++
+            if(posicao == vetor.length-1){
+                posicao = 0
+            }
+        }
+
+
+
     </script>
 </body>
 
