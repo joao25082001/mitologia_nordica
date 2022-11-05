@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,168 +10,225 @@
 </head>
 
 <body>
-    <audio id='pulo' src="assets/sons/Mario Jump 2 - QuickSounds.com.mp3"  ></audio>
+    <audio id='pulo' src="assets/sons/audio_certo_jump.mp3" preload="metadata"></audio>
     <header>
-       <div class="container">
-        <H1>LOGIAGAME</H1>
-        <DIV class="navbar">
-            <ul>
-         
-         
-               <li> 
-                CADASTRA-SE
-                </li> 
-                <li>
-                LOGIN
-                </li>
-                <li  id="ativo" onclick="playaudio() "style="display:block">🔈</li>
-                <li id="pausado"  onclick="pauseaudio() "style= "display:none">🔊</li>
-            </ul>
-        </DIV>
-      </div>
+        <div class="container">
+            <H1>LOGIAGAME</H1>
+            <DIV class="navbar">
+                <ul>
+
+
+                    <li>
+                        CADASTRA-SE
+                    </li>
+                    <li>
+                        LOGIN
+                    </li>
+                    <li id="ativo" onclick="playaudio() " style="display:block">🔈</li>
+                    <li id="pausado" onclick="pauseaudio() " style="display:none">🔊</li>
+                </ul>
+            </DIV>
+        </div>
     </header> <br>
     <div class="banner">
-        
-        <a onclick="inicio()"> <H1 id="titulo_mito">M I T O L O G I A</H1></a> 
-       
-      <div  id="item_sumir1" class="item">
-     
-        <span class="titulo"  onclick="mitologia()">MITOLOGIA?</span> <br>
-        <div id="introducao1" style = "display:none">
-            A mitologia é um sistema de crenças composta por uma série de narrativas chamadas de mito. Essas histórias buscam explicar tudo o que existe e é importante para uma sociedade.
 
-            Os mitos são histórias que explicam a existência de diversos elementos da natureza, assim como ensinam sobre o comportamento humano. Essas narrativas e lendas compõem o imaginário coletivo de um determinado povo.
-            
-            Formam uma tradição oral, suas histórias são contadas de geração a geração. Esses relatos fabulosos se transformam na história das coisas e em uma crença comum compartilhada por um grupo de pessoas.
+        <a onclick="inicio()">
+            <H1 id="titulo_mito">M I T O L O G I A</H1>
+        </a>
+
+        <div id="item_sumir1" class="item">
+
+            <span class="titulo" onclick="mitologia()">MITOLOGIA?</span> <br>
+            <div id="introducao1" style="display:none">
+                A mitologia é um sistema de crenças composta por uma série de narrativas chamadas de mito. Essas
+                histórias buscam explicar tudo o que existe e é importante para uma sociedade.
+
+                Os mitos são histórias que explicam a existência de diversos elementos da natureza, assim como ensinam
+                sobre o comportamento humano. Essas narrativas e lendas compõem o imaginário coletivo de um determinado
+                povo.
+
+                Formam uma tradição oral, suas histórias são contadas de geração a geração. Esses relatos fabulosos se
+                transformam na história das coisas e em uma crença comum compartilhada por um grupo de pessoas.
+            </div>
         </div>
-    </div>  
-     
-     <div  id="item_sumir2" class="item">
-        <span class="titulo"  onclick="principais()">
-            MITOLOGIAS PRINCIPAIS 
-        </span> 
-        
-    <div id="introducao2a" class='introducao2' style = "display:none">
-            <a class="mito" href="">Mitologia NÓRDICA:</a> <br>
-            
-            A mitologia nórdica ou germânica foi desenvolvida nos países escandinavos ou nórdicos, como as atuais Suécia, Noruega, Finlândia, Islândia e Dinamarca.
 
-            Da mesma forma que a mitologia grega, romana e egípcia, a mitologia nórdica possui grande importância na configuração da cultura dos antepassados desses povos. Até hoje, ela inspira filmes, quadrinhos, vídeos, jogos, etc.
-            
-            Constituída de deuses, heróis, anões, gigantes, serpentes, lobos e feiticeiros, as lendas relatam acontecimentos que procuram explicar a origem da humanidade, a vida após a morte, fenômenos da natureza, dentre outros.
-            
-            Por ser crença entre vários povos é também chamada de mitologia viking ou germânica.<br><a href="">faça o logim para saber mais </a> <br>
+        <div id="item_sumir2" class="item">
+            <span class="titulo" onclick="principais()">
+                MITOLOGIAS PRINCIPAIS
+            </span>
+
+            <div id="introducao2a" class='introducao2' style="display:none">
+                <a class="mito" href="">Mitologia NÓRDICA:</a> <br>
+
+                A mitologia nórdica ou germânica foi desenvolvida nos países escandinavos ou nórdicos, como as atuais
+                Suécia, Noruega, Finlândia, Islândia e Dinamarca.
+
+                Da mesma forma que a mitologia grega, romana e egípcia, a mitologia nórdica possui grande importância na
+                configuração da cultura dos antepassados desses povos. Até hoje, ela inspira filmes, quadrinhos, vídeos,
+                jogos, etc.
+
+                Constituída de deuses, heróis, anões, gigantes, serpentes, lobos e feiticeiros, as lendas relatam
+                acontecimentos que procuram explicar a origem da humanidade, a vida após a morte, fenômenos da natureza,
+                dentre outros.
+
+                Por ser crença entre vários povos é também chamada de mitologia viking ou germânica.<br><a href="">faça
+                    o logim para saber mais </a> <br>
                 <img src="assets/imgs/serpente.png" alt="">
                 <img src="assets/imgs/thor (2).png" alt="">
                 <img src="assets/imgs/odin.png" alt="">
                 <img src="assets/imgs/guarda.png" alt="">
-                 <img src="assets/imgs/loki.png" alt="">
+                <img src="assets/imgs/loki.png" alt="">
                 <img style="height:75px;margin-top:0" src="assets/imgs/tyr_finalizado.png" alt="">
-                <img   src="assets/imgs/balder_o_belo.png" alt="">
+                <img src="assets/imgs/balder_o_belo.png" alt="">
                 <img src="assets/imgs/lobo_finalizado.png" alt="">
             </div>
-            <div id='introducao2b'
-            class='introducao2' style = "display:none" >
-            <a href="">Mitologia GREGA:</a> <br>
-           
-            Mitologia grega é o estudo dos conjuntos de narrativas relacionadas com os mitos dos gregos antigos e dos seus significados. Para muitos estudiosos modernos, entender os mitos gregos é o mesmo que lançar luz sobre a compreensão da sociedade grega antiga e seu comportamento, bem como suas práticas ritualísticas.Os mitos gregos ilustram as origens do mundo, os modos de vida, as aventuras e desventuras de uma ampla variedade de deuses, deusas, heróis, heroínas (deidades) e de outras criaturas mitológicas.
+            <div id='introducao2b' class='introducao2' style="display:none">
+                <a href="">Mitologia GREGA:</a> <br>
 
-            Ao longo dos tempos, esses mitos foram expressos através de uma extensa coleção de narrativas, que constituem a literatura grega, e também na representação de outras artes, como a pintura da Grécia Antiga e a cerâmica de figuras vermelhas. Inicialmente divulgados em tradição oral-poética, atualmente esses mitos são tratados apenas como parte da literatura grega. Tal literatura abrange as mais conhecidas fontes literárias da Grécia Antiga: os poemas épicos Ilíada e Odisseia (ambos atribuídos a Homero e que tratam dos acontecimentos em torno da Guerra de Troia, destacando a influência de deuses e de outros seres), e também a Teogonia e Os Trabalhos e os Dias, ambos produzidos por Hesíodo. <br><a href="">faça o logim para saber mais </a> <br>
+                Mitologia grega é o estudo dos conjuntos de narrativas relacionadas com os mitos dos gregos antigos e
+                dos seus significados. Para muitos estudiosos modernos, entender os mitos gregos é o mesmo que lançar
+                luz sobre a compreensão da sociedade grega antiga e seu comportamento, bem como suas práticas
+                ritualísticas.Os mitos gregos ilustram as origens do mundo, os modos de vida, as aventuras e desventuras
+                de uma ampla variedade de deuses, deusas, heróis, heroínas (deidades) e de outras criaturas mitológicas.
+
+                Ao longo dos tempos, esses mitos foram expressos através de uma extensa coleção de narrativas, que
+                constituem a literatura grega, e também na representação de outras artes, como a pintura da Grécia
+                Antiga e a cerâmica de figuras vermelhas. Inicialmente divulgados em tradição oral-poética, atualmente
+                esses mitos são tratados apenas como parte da literatura grega. Tal literatura abrange as mais
+                conhecidas fontes literárias da Grécia Antiga: os poemas épicos Ilíada e Odisseia (ambos atribuídos a
+                Homero e que tratam dos acontecimentos em torno da Guerra de Troia, destacando a influência de deuses e
+                de outros seres), e também a Teogonia e Os Trabalhos e os Dias, ambos produzidos por Hesíodo. <br><a
+                    href="">faça o logim para saber mais </a> <br>
                 <!-- <img src="assets/imgs/loki.png" alt="">
                 <img style="height:105px;margin-top:0" src="assets/imgs/tyr_finalizado.png" alt="">
                 <img   src="assets/imgs/balder_o_belo.png" alt="">
                 <img src="assets/imgs/lobo_finalizado.png" alt=""> -->
             </div>
-         <br>
-        </div> 
-    <div  id="item_sumir3" class="item" style="color: white";> 
-       <span class="titulo" onclick="curiosidades()">CURIOSIDADES</span> <br>
-       <div id="introducao3" style ="display:none">
-        Lorem ipsum dolor sit amet    consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet img  
-        autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similiqo, aliquid praesentium  Lorem ipsum dolor sit amet    consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet img  
-        autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similiqo, aliquid praesentium 
-       </div>
-    </div>  
+            <br>
+        </div>
+        <div id="item_sumir3" class="item" style="color: white" ;>
 
-    <div  id="item_sumir4" class="item"> 
-       <span class="titulo" onclick="midia()">FILMES E SERIES</span> <br>
-       <div id="introducao4" style = "display:none">
-        Lorem ipsum dolor sit amet    consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet img  
-        autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similiqo, aliquid praesentium  Lorem ipsum dolor sit amet    consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet img  
-        autem beatae provident, aspernatur adipisci sit similique odit nemo, aliquid praesentium vel! Expedita dolorum veritatis porro cumque quidem doloribus officia?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non consequatur autem beatae provident, aspernatur adipisci sit similiqo, aliquid praesentium 
-       </div>
-    </div>  
-  
-    
-<audio id=audio src="assets/sons/Stage Win (Super Mario) - QuickSounds (mp3cut.net).mp3"  loop  ></audio>
 
-</div> 
+        </div>
 
-<script>
-   function playaudio(){ 
-    var play = audio
-    play.play()
-     pausado.style.display="block"
-    ativo.style.display="none"
+        <div id="item_sumir4" class="item">
+            <span class="titulo" onclick="midia()">FILMES E SERIES</span> <br>
+            <div id="introducao4" style="display:none">
+             
+                  
+                    <div class="imgs">
+                        <button id="prev_button"> a</button>
 
-   }
-   function pauseaudio(){
-    var mudo = audio
-   mudo.pause()
-     pausado.style.display="none"
-     ativo.style.display="block"
-   }
- 
-    function inicio(){
-        var play = pulo
-    play.play()
+                        <a href="https://www.adorocinema.com/filmes/filme-191035/">
+                            <img src="assets/imgs/filmes_1356_Percy-Jackson-e-o-Mar-de-Monstros-Poster.jpg" style = "display:none" alt="">
+                        </a>
 
-    titulo_mito.style.display ="none"
-    item_sumir1.style.display ="block"
-    item_sumir2.style.display ="block"
-    item_sumir3.style.display ="block"
-    item_sumir4.style.display ="block"
-    }
-    
-    function mitologia(){
-        var play = pulo
-    play.play()
-    introducao1.style.display = 'block'
-    introducao2a.style.display = "none"
-     introducao2b.style.display = "none"
-     introducao3.style.display = "none"
-     introducao4.style.display = "none"
-   
-    }
-    function principais(){
-        var play = pulo
-    play.play()
-     introducao1.style.display = "none"
-     introducao2a.style.display = "block"
-     introducao2b.style.display = "block"
-     introducao3.style.display = "none"
-     introducao4.style.display = "none"
-     }
-     function curiosidades(){
-        var play = pulo
-    play.play()
-    
-    introducao1.style.display = "none"
-     introducao2a.style.display = "none"
-     introducao2b.style.display = "none"
-    introducao3.style.display = "block"
-     introducao4.style.display = "none"
-     }
-   function midia(){
-    var play = pulo
-    play.play()
-    
-    introducao1.style.display = "none"
-     introducao2a.style.display = "none"
-     introducao2b.style.display = "none"
-     introducao3.style.display = "none"
-    introducao4.style.display = "block"
-     }
-</script>
+                        <a href="https://www.netflix.com/br/title/70301870">
+                            <img class="fotos" src="assets/imgs/vikings.jfif" style = "display:none" alt="">
+                        </a>
+                        <a href="https://www.adorocinema.com/filmes/filme-193108/">
+                            <img class="fotos" src="assets/imgs/filmes_1426_Thor2-Poster.jpg" style = "display:none" alt="">
+                        </a>
+                        <a href="https://www.cinemaepipoca.com.br/os-cavaleiros-zodiaco-lenda-santuario/">
+                            <img class="fotos" src="assets/imgs/filmes_3379_oscavaleirosdozodiacoposter001.jpg" style = "display:none" alt="">
+                        </a>
+                        <a href="https://www.imdb.com/title/tt11138512/">
+                            <img class="fotos" src="assets/imgs/the_norman.jfif" style = "display:block" alt="">
+                        </a>
+                        <a href="https://www.adorocinema.com/filmes/filme-138335/">
+                            <img class="fotos" src="assets/imgs/hercules.jfif" style = "display:none" alt="">
+                        </a>
+                        <a
+                            href="https://www.amazon.com.br/ladr%C3%A3o-raios-Percy-Jackson-Olimpianos-ebook/dp/B009M84O0S">
+                            <img class="fotos" src="assets/imgs/Percy_Jackson.jfif" style = "display:none" alt="">
+                        </a>
+                        <a href="https://www.netflix.com/br/title/80232926">
+                            <img class="fotos" src="assets/imgs/ragnarok.jfif" style = "display:none" alt="">
+                        </a>
+                        <a href="https://www.netflix.com/br/title/80074249">
+                            <img class="fotos" src="assets/imgs/The_Last_Kingdom.jfif" style = "display:none" alt="">
+                        </a>
+                        <a href="https://www.imdb.com/title/tt0862467/">
+                            <img class="fotos" src="assets/imgs/valhalla_rising.jfif" style = "display:none" alt="">
+                        </a>
+                        <button id="next_button">a
+                        </button>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+
+
+        <audio id=audio src="assets/sons/SuperMarioBros.mp3" preload="auto" loop></audio>
+
+    </div>
+
+    <script>
+        function playaudio() {
+            var play = audio
+            play.play()
+            pausado.style.display = "block"
+            ativo.style.display = "none"
+
+        }
+        function pauseaudio() {
+            var mudo = audio
+            mudo.pause()
+            pausado.style.display = "none"
+            ativo.style.display = "block"
+        }
+
+        function inicio() {
+            var play = pulo
+            play.play()
+
+            titulo_mito.style.display = "none"
+            item_sumir1.style.display = "block"
+            item_sumir2.style.display = "block"
+            item_sumir3.style.display = "block"
+            item_sumir4.style.display = "block"
+        }
+
+        function mitologia() {
+            var play = pulo
+            play.play()
+            introducao1.style.display = 'block'
+            introducao2a.style.display = "none"
+            introducao2b.style.display = "none"
+            introducao4.style.display = "none"
+
+        }
+        function principais() {
+            var play = pulo
+            play.play()
+            introducao1.style.display = "none"
+            introducao2a.style.display = "block"
+            introducao2b.style.display = "block"
+            introducao4.style.display = "none"
+        }
+        function curiosidades() {
+            var play = pulo
+            play.play()
+
+            introducao1.style.display = "none"
+            introducao2a.style.display = "none"
+            introducao2b.style.display = "none"
+
+            introducao4.style.display = "none"
+        }
+        function midia() {
+            var play = pulo
+            play.play()
+
+            introducao1.style.display = "none"
+            introducao2a.style.display = "none"
+            introducao2b.style.display = "none"
+            introducao4.style.display = "block"
+        }
+
+       
+    </script>
 </body>
+
 </html>

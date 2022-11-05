@@ -59,11 +59,12 @@
  }
   .banner h1{
     margin: 0;
+    font-size: 100px;
   
  }
  .banner h1:hover{
-    font-size: 200px;
-  
+    font-size: 150px;
+   color: #03058a;
     cursor: pointer;
  }
  .banner h1:hover::after{
@@ -99,6 +100,10 @@
  }
  #item_sumir4{
   display: none;
+  height: 400px;
+  width: 100%;
+ 
+
  }
 
 .item .titulo:hover{
@@ -149,22 +154,40 @@ font-size: 15px;
   font-size: 15px;
 }
 .item #introducao4{
-  background-color: transparent;
-    margin-left: 5%;
-  
-    width: 80%;
-    margin-top: 1%;
+    margin-top: 3%;
+   align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 80%;  
+    width:60%;
+    
     border: solid white 0.5px;
     border-radius: 25px;
-    padding: 5%;
-    @font-face{
-  font-family:'Pixel';src:url('assets/fontes/pixel/Pixel.ttf')
-    };
-  font-size: 15px;
-
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #020349;
+   
 }
 
 .introducao2 img{
   margin-top: 15px;
     height:105px;
 }
+#introducao4 .imgs{
+  height: 100%;
+  flex-wrap: wrap;
+  width: 80%;
+  display: flex;  
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.fotos{
+  width: 250px;
+  height: 250px;
+}
+
