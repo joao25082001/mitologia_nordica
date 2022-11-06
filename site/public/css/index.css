@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: 0;
+}
+
+/* summer-pixel-22-font */
+/* arcadeclassic */
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://1.bp.blogspot.com/-kY20TST20tY/TqQtWnlTCXI/AAAAAAAABco/-FFU47WUqvc/s1600/109-Cell11.com.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #020349;
+  opacity: 0.7;
+  font-family: 'arcadeclassic';
+
+}
+
+header:hover {
+  opacity: 1;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.navbar ul {
+  font-size: 20px;
+  width: 250px;
+
+  list-style: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner {
+  margin-top: 2%;
+
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  font-family: 'arcadeclassic';
+  background-color: transparent;
+  letter-spacing: 2px;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 100px;
+
+}
+
+.banner h1:hover {
+  font-size: 150px;
+  color: #03058a;
+  cursor: pointer;
+}
+
+.banner h1:hover::after {
+  content: "";
+  border-top: solid white 5px;
+  display: block;
+  font-size: 100px;
+  color: black;
+}
+
+.banner .item {
+
+  font-size: 25px;
+ 
+  margin-left: 0;
+
+}
+
+.item {
+  margin-top: 3%;
+  background-color: transparent;
+}
+
+#item_sumir1 {
+  display: none;
+}
+
+#item_sumir2 {
+  display: none;
+}
+
+#item_sumir3 {
+  display: none;
+}
+
+#item_sumir4 {
+  display: none;
+  height: 400px;
+  width: 100%;
+
+
+}
+
+.item .titulo:hover {
+  border-bottom: solid white 2px;
+}
+
+.item .introducao2 {
+  background-color: transparent;
+  margin-left: 5%;
+
+  width: 80%;
+  margin-top: 1%;
+  border: solid white 0.5px;
+  border-radius: 15px;
+  padding: 5%;
+
+  @font-face {
+    font-family: 'Pixel';
+    src: url('assets/fontes/pixel/Pixel.ttf')
+  }
+
+  ;
+  font-size: 15px;
+
+}
+
+.item #introducao1 {
+  width: 80%;
+  margin-top: 1%;
+  border: solid white 0.5px;
+  border-radius: 15px;
+  padding: 5%;
+
+  @font-face {
+    font-family: 'Pixel';
+    src: url('assets/fontes/pixel/Pixel.ttf')
+  }
+
+  ;
+  font-size: 15px;
+  background-color: transparent;
+  margin-left: 5%;
+
+
+}
+
+.item #introducao3 {
+  background-color: transparent;
+  margin-left: 5%;
+
+  width: 80%;
+  margin-top: 1%;
+  border: solid white 0.5px;
+  border-radius: 15px;
+  padding: 5%;
+
+  @font-face {
+    font-family: 'Pixel';
+    src: url('assets/fontes/pixel/Pixel.ttf')
+  }
+
+  ;
+  font-size: 15px;
+}
+
+.item #introducao4 {
+  margin-top: 3%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 80%;
+  width: 60%;
+
+
+  border-radius: 15px;
+  margin-left: 20%;
+  margin-right: 20%;
+  
+
+}
+
+.introducao2 img {
+  margin-top: 15px;
+  height: 105px;
+}
+
+#introducao4 .imgs {
+  height: 100%;
+  flex-wrap: wrap;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.imgs .button{
+  width:50px;
+  height:50px;
+  cursor: pointer;
+}
+
+.fotos {
+  border-radius: 15px;
+  width: 250px;
+  height: 250px;
+  box-shadow: 4px 22px 56px -26px rgba(189,189,166,0.75);
+-webkit-box-shadow: 4px 22px 56px -26px rgba(223, 223, 205, 0.75);
+-moz-box-shadow: 4px 22px 56px -26px rgba(189,189,166,0.75);
+}
+.fotos:hover{
+  width: 320px;
+  height: 320px;
+}
