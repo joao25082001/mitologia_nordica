@@ -53,20 +53,28 @@ main {
     justify-content: center;
     align-items: center;
     display: flex;
-
     flex-wrap: wrap;
 }
+.titulo_reino{
+    width: 100%;
+    text-align: center;
+    margin: 3% 0 3% 0;
+    font-family:'arcadeclassic';
+    color: white;
+    letter-spacing: 3px;
+}
 main p {
-
+  margin-top: 10px;
  font-size: 25px;
  width: 70%;
  color: white;
  letter-spacing: 2px;   
  font-family: 'arcadeclassic';
+
 }
 .container_reinos{
     display: flex;
-    gap: 5%;
+    gap: 3%;
     width:50%;
     justify-content: space-around;
 }
@@ -75,19 +83,53 @@ main p {
     width: 200px;
     height: 200px;
     margin-top: 20px;
-    background-color: #020349;
+    
 }
-
+.reinos img{
+ 
+    height: 180px;
+    width: 282px;
+}
 .texto_reinos {
    
       font-size: 13px;
     margin-top: 20px;
-    border: solid white 3px;
+    border: solid white 1px;
     width: 280px;
     color: white;
     letter-spacing: 2px;
-    height: 150px;
-   
+    height: 180px;
     text-align: center;
     font-family: 'arcadeclassic';
+}
+#reinos{
+  margin-top: 20px;
+}
+
+.Arvore{
+    width: 90vw;
+    height: 70vh;
+    font-family: 'arcadeclassic';
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.personagens p{
+    width: 100%;
+    text-align: center;
+}
+.personagens{
+    width: 80%;
+    height: 900px;
+    
+    border: solid 2px white;
+}
+.deus{
+    border: solid 5px white;
+    margin-top: 5px;
+   text-align: start;
+}
+.deus img{
+    height:100px;
+    
 }
