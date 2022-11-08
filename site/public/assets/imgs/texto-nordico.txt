@@ -39,7 +39,7 @@ Valhalla, chamada de “Salão dos Mortos”, corresponde à residência dos deu
 Ragnarök
 Na mitologia nórdica, Ragnarök corresponde ao local do destino final dos deuses. A batalha de Ragnarök aconteceu na região de Midgard, entre as forças do bem e do mal, resultando no fim do mundo e de todas as criaturas - deuses, heróis, gigantes, monstros.
 
-Odin: maior dos deuses vikings, o pai dos deuses
+Odin:  o pai dos deuses
  Odin é o maior dos deuses nórdicos, o pai dos deuses. Odin é representado como um homem velho, mas forte, e vestido com suas armas de guerreiro, pois ele é o deus da sabedoria, da guerra e da morte. Também é conhecido como Wotan na mitologia germânica.
 
 Para obter a sabedoria, Odin ofereceu um dos olhos a Mimir, o guardião, e ainda ficou nove dias ferido por um flecha e pendurado na árvore Yggdrasil, para ser iniciado nas runas. Nos campos de batalha, Odin costumava cavalgar montado em seu cavalo de oito patas, Sleipnir.
@@ -77,8 +77,8 @@ Balder disseminou a boa vontade e a paz em todos os lugares que visitou, o que f
 É o deus do fogo, da trapaça e da travessura, está também relacionado à magia, podendo assumir forma que quiser. Ele não faz parte dos Aesir (o clã de deuses que residem em Asgard), apesar de viver ali. É geralmente visto como um grande símbolo da maldade e da trapaça, e, embora suas artimanhas geralmente causem problemas a curto prazo aos deuses, estes frequentemente se beneficiam com elas no fim. É notadamente uma das figuras mais profundas, representativas e complexas da Mitologia Nórdica.
 
 Ele domina um majestoso conhecimento em estratégia, usando suas habilidades para interesses próprios, fabricando e elaborando intrigas e densar mentiras. Por ser um mestiço entre deus e jotun, a sua relação com os outros deuses é bastante problemática.
- jormungand:A SERPENTE QUE CIRCULA O MUNDO
-Eles acreditavam que muito abaixo da superfície, um monstro enorme espreitava. Esta besta era tão enorme que circundava o mundo inteiro, mordendo a própria cauda para formar um anel completo em torno do mar.
+    jormungand:A SERPENTE QUE CIRCULA O MUNDO
+    Eles acreditavam que muito abaixo da superfície, um monstro enorme espreitava. Esta besta era tão enorme que circundava o mundo inteiro, mordendo a própria cauda para formar um anel completo em torno do mar.
 
 Esta era Jörmungandr, geralmente anglicizado como Jormungand. Um dos descendentes monstruosos de Loki, ela vivia nas partes mais profundas do mar e esperava sua hora de subir à superfície mais uma vez.
 Ela teria sua chance no Ragnarok, a batalha que foi profetizada como o fim do mundo e dos deuses. Quando ela emergisse do mar, ela traria uma onda de destruição e se envolveria em uma batalha épica de força e fortaleza.
