@@ -9,17 +9,17 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="validarSessao(), atualizacaoPeriodica()">
     <header>
         <div class="container">
             <H1>LOGIAGAME</H1>
             <DIV class="navbar">
                 <ul>
                     <li>
-                        NÓRDICA
+                      OLÁ: <span id="nome"></span>
                     </li>
                     <li>
-                        GREGA
+                     NORDICA
                     </li>
                     <li>
                         JOGOS
@@ -191,6 +191,8 @@
 
 </html>
 <script>
+//    nome_persona.innerHTML = sessionStorage.NOME_USUARIO
+ nome.innerHTML = sessionStorage.NOME_USUARIO
 
     function playaudio() {
         var play = audio

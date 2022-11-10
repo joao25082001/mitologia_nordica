@@ -22,7 +22,7 @@
                         HOME
                     </li>
                     <li>
-                        LOGIN
+                      <a href="login.html">login</a>
                     </li>
                     <li id="ativo" onclick="playaudio() " style="display:block">🔈</li>
                     <li id="pausado" onclick="pauseaudio() " style="display:none">🔊</li>
@@ -47,6 +47,13 @@
 
             <button class="btn" onclick="cadastrar()">Cadastrar</button>
         </div>
+        <!-- <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif">
+        </div>
+
+        <div id="div_erros_login">
+
+        </div> -->
     </main>
  
 
@@ -74,27 +81,35 @@
                     <button class="btn" onclick="cadastrar()">Cadastrar</button>
 
                 </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login">
-
-                </div>
+             
             </div>
         </div>
     </div> -->
 
 
 
-
+<audio src="assets/sons/SuperMarioBros.mp3" id="audio"></audio>
 </body>
 
 </html>
 
 <script>
+ 
+        function playaudio() {
+            var play = audio
+            play.play()
+            pausado.style.display = "block"
+            ativo.style.display = "none"
+        }
+        function pauseaudio() {
+            var mudo = audio
+            mudo.pause()
+            pausado.style.display = "none"
+            ativo.style.display = "block"
+        }
     function cadastrar() {
-        aguardar();
+       
+
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo

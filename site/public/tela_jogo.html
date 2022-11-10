@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+    <link rel="stylesheet" href="css/jogo.css">
+</head>
+
+<body>
+    <audio id='pulo' src="assets/sons/audio_certo_jump.mp3" preload="metadata"></audio>
+    <header>
+        <div class="container">
+            <H1>LOGIAGAME</H1>
+            <DIV class="navbar">
+                <ul>
+
+
+                    <li>
+                     <a href="mitologia_nordica.html">HISTORIA</a>
+                    </li>
+                    <li>
+                       <a href="index.html">SAIR</a>
+                    </li>
+                    <li id="ativo" onclick="playaudio() " style="display:block">🔈</li>
+                    <li id="pausado" onclick="pauseaudio() " style="display:none">🔊</li>
+                </ul>
+            </DIV>
+        </div>
+        
+    </header>
+    <div class = "personagens">
+        <div onclick="thor()" class="tela_persona">
+            <img src="assets/imgs/thor (2).png" alt="">
+        </div>
+        <div onclick="balder()" class="tela_persona">
+            <img  src="assets/imgs/balder_o_belo.png" alt="">
+        </div>
+        <div onclick="serpente()"  class="tela_persona">
+            <img src="assets/imgs/serpente.png" alt="">
+        </div>
+        <div onclick="guarda()" class="tela_persona">
+            <img src="assets/imgs/guarda.png" alt="">
+        </div>
+        <div onclick="loki()" class="tela_persona">
+            <img  src="assets/imgs/loki.png" alt="">
+        </div>
+        <div onclick="odin()"  class="tela_persona">
+            <img src="assets/imgs/odin_finalizado.png" alt="">
+        </div>
+        <div onclick="tyr()" style="width: 16%;"  class="tela_persona">
+            <img src="assets/imgs/tyr_finalizado.png" style="width: 200px" alt="">
+        </div>
+        <div onclick="fenrir()"  class="tela_persona">
+            <img src="assets/imgs/lobo_finalizado.png" alt="">
+        </div>
+    </div>
+    <div class="batalha">
+        <div id="personagem_1">
+        
+        </div>
+        <H2 onclick="" style="color: yellow;">VS</H2>
+        <div id="personagem_2"> 
+          
+        </div>
+    </div>
+ <script>
+    function fenrir(){
+        personagem_1.innerHTML =  `<img src="assets/imgs/lobo_finalizado.png" alt="">`
+    }
+    function serpente(){
+        personagem_2.innerHTML =  `<img src="assets/imgs/serpente.png" alt="">`
+    
+
+    }
+ </script>
+
+        
+    </body>
