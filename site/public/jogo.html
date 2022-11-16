@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jogo.css">
+    <title>jogo</title>
+</head>
+<body>
+    <h1>ESCOLHA UM PERSONAGEM</h1>
+    <div class="personagens">
+        <div onclick="thor1(thor)" class="tela_persona">
+            <img src="assets/imgs/thor (2).png" alt="">
+        </div>
+        <div onclick="balder1(balder)" class="tela_persona">
+            <img src="assets/imgs/balder_o_belo.png" alt="">
+        </div>
+        <div onclick="serpente1(serpente)" class="tela_persona">
+            <img src="assets/imgs/serpente.png" alt="">
+        </div>
+        <div onclick="guarda1(guarda)" class="tela_persona">
+            <img src="assets/imgs/guarda.png" alt="">
+        </div>
+        <div onclick="loki1(loki)" class="tela_persona">
+            <img src="assets/imgs/loki.png" alt="">
+        </div>
+        <div onclick="odin1(odin)" class="tela_persona">
+            <img src="assets/imgs/odin_finalizado.png" alt="">
+        </div>
+        <div onclick="tyr1(tyr)" style="width: 25%;" class="tela_persona">
+            <img src="assets/imgs/tyr_finalizado.png" style="width: 180" alt="">
+        </div>
+        <div onclick="fenrir1(fenrir)" class="tela_persona">
+            <img src="assets/imgs/lobo_finalizado.png" alt="">
+        </div>
+    </div>
+    <div>
+        <div style="display: flex;">
+            <span id="personagem1">
+           
+          
+                <img style="width: 50%;" onclick="ataque_basico()" src="assets/imgs/lobo_finalizado.png"
+                    alt=""> <br>
+    
+            </span> <br>
+            <span id="personagem2">
+              
+                <img  onclick="ataque_basico()" src=assets/imgs/odin_finalizado.png alt=""> <br>
+    
+            </span>
+        </div>
+        <div id="hps" style="display:flex ;">
+            <div id="hp_persona1" style="width:50%;height: 20px; background-color:red;flex-direction: row-reverse;"></div>
+            <div id="hp_persona2" style="width:50%;height: 20px; background-color:green;flex-direction: row-reverse;"></div>
+        </div>
+    
+    
+        <h5 id="termino"></h5>
+    </div>
+    
+</body>
+</html>

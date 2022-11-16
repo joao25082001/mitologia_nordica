@@ -109,8 +109,6 @@
         }
     function cadastrar() {
        
-
-
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
@@ -128,7 +126,7 @@
         else {
             setInterval(sumirMensagem, 5000)
         }
-
+        
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
             method: "POST",

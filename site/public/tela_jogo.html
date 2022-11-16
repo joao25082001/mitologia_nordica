@@ -16,66 +16,57 @@
             <H1>LOGIAGAME</H1>
             <DIV class="navbar">
                 <ul>
-
-
                     <li>
-                     <a href="mitologia_nordica.html">HISTORIA</a>
+                        <a href="mitologia_nordica.html">HISTORIA</a>
                     </li>
                     <li>
-                       <a href="index.html">SAIR</a>
+                        <a href="index.html">SAIR</a>
                     </li>
                     <li id="ativo" onclick="playaudio() " style="display:block">🔈</li>
                     <li id="pausado" onclick="pauseaudio() " style="display:none">🔊</li>
                 </ul>
             </DIV>
         </div>
-        
+
     </header>
-    <div class = "personagens">
-        <div onclick="thor()" class="tela_persona">
+    <div class="personagens">
+        <div onclick="thor1(thor)" id="btn_fenrir" class="tela_persona">
             <img src="assets/imgs/thor (2).png" alt="">
         </div>
-        <div onclick="balder()" class="tela_persona">
-            <img  src="assets/imgs/balder_o_belo.png" alt="">
+        <div onclick="balder1(balder)" id="btn_fenrir" class="tela_persona">
+            <img src="assets/imgs/balder_o_belo.png" alt="">
         </div>
-        <div onclick="serpente()"  class="tela_persona">
+        <div onclick="serpente1(serpente)" id="btn_fenrir" class="tela_persona">
             <img src="assets/imgs/serpente.png" alt="">
         </div>
-        <div onclick="guarda()" class="tela_persona">
+        <div onclick="guarda1(guarda)" id="btn_fenrir" class="tela_persona">
             <img src="assets/imgs/guarda.png" alt="">
         </div>
-        <div onclick="loki()" class="tela_persona">
-            <img  src="assets/imgs/loki.png" alt="">
+        <div onclick="loki1(loki)" id="btn_fenrir" class="tela_persona">
+            <img src="assets/imgs/loki.png" alt="">
         </div>
-        <div onclick="odin()"  class="tela_persona">
+        <div onclick="odin1(odin)" id="btn_fenrir" class="tela_persona">
             <img src="assets/imgs/odin_finalizado.png" alt="">
         </div>
-        <div onclick="tyr()" style="width: 16%;"  class="tela_persona">
-            <img src="assets/imgs/tyr_finalizado.png" style="width: 200px" alt="">
+        <div onclick="tyr1(tyr)" style="width: 16%;" id="btn_fenrir" class="tela_persona">
+            <img src="assets/imgs/tyr_finalizado.png" style="width: 180" alt="">
         </div>
-        <div onclick="fenrir()"  class="tela_persona">
+        <div onclick="fenrir1(fenrir)" id="bnt_fenrir" desabled class="tela_persona">
             <img src="assets/imgs/lobo_finalizado.png" alt="">
         </div>
     </div>
-    <div class="batalha">
-        <div id="personagem_1">
-        
-        </div>
-        <H2 onclick="" style="color: yellow;">VS</H2>
-        <div id="personagem_2"> 
-          
-        </div>
+    <div id="batalha">
+        <!-- <div id="personagem_1">
+
+        </div> -->
+
+       
+    </div> 
+    <div id="hps" style="display:flex ;">
+        <div id="hp_persona1" style="width:50%;height: 20px; background-color:blue ;flex-direction: row-reverse;"></div>
+        <div id="hp_perso na2" style="width:50%;height: 20px; background-color:green;flex-direction: row-reverse;"></div>
     </div>
- <script>
-    function fenrir(){
-        personagem_1.innerHTML =  `<img src="assets/imgs/lobo_finalizado.png" alt="">`
-    }
-    function serpente(){
-        personagem_2.innerHTML =  `<img src="assets/imgs/serpente.png" alt="">`
-    
 
-    }
- </script>
 
-        
-    </body>
+    <script src="jsjogo.js"></script>
+</body>
