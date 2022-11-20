@@ -23,6 +23,30 @@ function listar(req, res) {
             }
         );
 }
+console.log("acessei a model")
+function atualizar(req, res) {
+    var idpersona = req.body.idpersona;
+    if (idpersona == undefined) {
+        res.status(400).send("Seu personagem está undefined!");
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.atualizar(idpersona)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar a atualização! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
 
 function entrar(req, res) {
     var email = req.body.emailServer;
@@ -98,5 +122,6 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    atualizar
 }

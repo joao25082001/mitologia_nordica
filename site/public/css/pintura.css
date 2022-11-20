@@ -2,12 +2,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'arcadeclassic';
 }
-html, body{
-    height: 100%;
+
+header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    background-color: #020349;
+    opacity: 0.7;
+    justify-content: center;
+    
+
 }
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+header:hover {
+    opacity: 1;
+}
+
+.containermenu {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    
+}
+
+.navbarmenu ul {
+    font-size: 25px;
+    width: 550px;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
 body{
-    background-color:blue;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    background-color:   rgb(61, 61, 61);
+    
+   
+}
+h2{
+    font-size: 50px;
+    background-color: #020349;
+    width: 25%;
+    text-align: center;
+}
+h1{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+}
+.centro{
+    height: 80vh;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,8 +75,7 @@ body{
  .container{
    padding: 2rem; 
     width: 60%;
-   
-    background-color: rgb(61, 61, 61);
+background-color: black;
     border-radius: 3px;
 }
 .navbar{
@@ -29,10 +86,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 10px;
+    background-color: rgb(61, 61, 61);
 }
 .btn, input{
     height: 30px;
     padding: 0 1em;
+    font-size: 25px;
+    
 }
 .color{
     padding: 0 .25em;
@@ -42,14 +103,26 @@ body{
 
 .container{
     --size: 4;
-    height: 80%;
+    height: 90%;
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(var(--size), 1fr);
     grid-template-rows: repeat(var(--size), 1fr);
     gap: 3px;
     padding: 3px;
 }
 .pixel{
-    background-color:black;
+  
+    background-color: gray;
     border-radius: 2px;
+}
+.inspira{
+    width: 10%;
+    height: 90vh;
+    display: flex;
+    align-items: center;    justify-content: space-around;
+    flex-direction: column;
+}
+.inspira img{
+    width: 150px;
 }

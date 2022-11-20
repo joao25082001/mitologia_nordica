@@ -9,20 +9,17 @@
     <title>Document</title>
 </head>
 
-<body onload="validarSessao(), atualizacaoPeriodica()">
+<body >
     <header>
         <div class="container">
-            <H1>LOGIAGAME</H1>
+            <H1>LOGIAGAME</H1>-
             <DIV class="navbar">
                 <ul>
                     <li>
                       OLÁ: <span id="nome"></span>
                     </li>
                     <li>
-                     NORDICA
-                    </li>
-                    <li>
-                        JOGOS
+                        <a href="jogo_pintar.html">Desenhar</a>
                     </li>
                     <li>
                         SAIR
@@ -42,7 +39,7 @@
             configuração da cultura dos antepassados desses povos. Até hoje, ela inspira filmes, quadrinhos, vídeos,
             jogos, etc.
 
-            Constituída de deuses, heróis, anões, gigantes, serpentes, lobos e feiticeiros, as lendas relatam
+            varituída de deuses, heróis, anões, gigantes, serpentes, lobos e feiticeiros, as lendas relatam
             acontecimentos que procuram explicar a origem da humanidade, a vida após a morte, fenômenos da natureza,
             dentre outros.
 
@@ -174,9 +171,9 @@
         </div>
 
         </div>
-        <div id="fade" class="hide"></div>
+        <div id="fade" class="hide" ></div>
         <div id="modal" class="hide">
-            <div class="modal-header">
+            <div  class="modal-header">
                 <h2 id="nome_persona">LOKI</h2>
                 <button id="close-modal">X</button>
             </div>
@@ -185,6 +182,8 @@
                
                 </span>
             </div>
+            <img id="like1" onclick="atualizar()" src="assets/imgs/like.jfif" alt="">
+            <img id="ok" style="display: none;" src="assets/imgs/ok1.jfif" alt="">
         </div>
     </main>
 </body>
@@ -193,7 +192,7 @@
 <script>
 //    nome_persona.innerHTML = sessionStorage.NOME_USUARIO
  nome.innerHTML = sessionStorage.NOME_USUARIO
-
+var personagem = 0
     function playaudio() {
         var play = audio
         play.play()
@@ -206,10 +205,15 @@
         pausado.style.display = "none"
         ativo.style.display = "block"
     }
+    var voto = false
+    
+    function sumirMensagem() {
+       cardErro.style.display = "none"
+   }
   
     function loki() {
         nome_persona.innerHTML = 'LOKI'
-        
+        personagem = 5
 
 
         animacao.innerHTML = `É o deus do fogo, da trapaça e da travessura, está também relacionado à magia, podendo assumir forma que quiser. Ele não faz parte dos Aesir (o clã de deuses que residem em Asgard), apesar de viver ali. É geralmente visto como um grande símbolo da maldade e da trapaça, e, embora suas artimanhas geralmente causem problemas a curto prazo aos deuses, estes frequentemente se beneficiam com elas no fim. É notadamente uma das figuras mais profundas, representativas e complexas da Mitologia Nórdica.<br>
@@ -217,6 +221,7 @@
         Ele domina um majestoso conhecimento em estratégia, usando suas habilidades para interesses próprios, fabricando e elaborando intrigas e densar mentiras. Por ser um mestiço entre deus e jotun, a sua relação com os outros deuses é bastante problemática.`
     }
     function thor() {
+        personagem = 3
         nome_persona.innerHTML = 'THOR'
         animacao.innerHTML = `Thor é odeus do trovão e filho de Odin. Talvez seja o deus nórdico mais popular até hoje, pois seu culto foi levado para a Inglaterra pelos Vikings. Também os romanos o conheceram quando lutavam contra os germânicos e acabaram descrevendo-o em seus relatos.<br>
 
@@ -225,6 +230,7 @@
         Os antigos acreditavam que os trovões eram a prova que Thor estaria usando o martelo, daí a crença em considerá-lo como deus do Trovão.`
     }
     function cobra() {
+        personagem = 6
         nome_persona.innerHTML = 'JORMUNGANDR'
         animacao.innerHTML = `
 Eles acreditavam que muito abaixo da superfície, um monstro enorme espreitava. Esta besta era tão enorme que circundava o mundo inteiro, mordendo a própria cauda para formar um anel completo em torno do mar.<br>
@@ -232,12 +238,14 @@ Esta era Jörmungandr, geralmente anglicizado como Jormungand. Um dos descendent
 Ela teria sua chance no Ragnarok, a batalha que foi profetizada como o fim do mundo e dos deuses. Quando ela emergisse do mar, ela traria uma onda de destruição e se envolveria em uma batalha épica de força e fortaleza.`
     }
     function guarda() {
+        personagem = 8
         nome_persona.innerHTML = 'HEIMDALL'
         animacao.innerHTML = ` tem como missão guardar a ponte Bifrost, um arco-íris ligando o céu à Terra, e de tocar o retumbante chifre Gjallarhorn, quando da aproximação do fim do mundo, o Ragnarök. Cavalga o cavalo-guará dourado Gulltoppr, além de possuir dentes de ouro, e ser filho de nove mães.
 
 `
     }
     function odin() {
+        personagem = 4
         nome_persona.innerHTML = 'ODIN'
         animacao.innerHTML = `Odin é o maior dos deuses nórdicos, o pai dos deuses. Odin é representado como um homem velho, mas forte, e vestido com suas armas de guerreiro, pois ele é o deus da sabedoria, da guerra e da morte. Também é conhecido como Wotan na mitologia germânica.
 
@@ -245,6 +253,7 @@ Para obter a sabedoria, Odin ofereceu um dos olhos a Mimir, o guardião, e ainda
 `
     }
     function balder() {
+        personagem = 7
         nome_persona.innerHTML = 'BALDER'
         animacao.innerHTML = `uma divindade da justiça e da sabedoria, e embora não pertencesse ao núcleo de deuses superiores, Aesir, era-lhe permitida a permanência em Asgard.<br>
 
@@ -252,12 +261,14 @@ Balder é marido da bela Nana, uma deusa benevolente e bela, que se atirou em su
 Balder disseminou a boa vontade e a paz em todos os lugares que visitou, o que fez dele um dos deuses mais amados. Sua popularidade e bondade inata atraíram a ira de Loki.`
     }
     function lobo() {
+        personagem = 1
         nome_persona.innerHTML = 'FENRIR'
         animacao.innerHTML = `Ele é filho do enigmático deus Loki e da giganta Angerboda, o que o torna irmão da serpente Jörmungandr e da deusa do submundo Hela (Hel ou Hell). Parecia que Fenrir e sua família tinham o sangue do pecado correndo em suas veias.<br>
 
 As pessoas também chamam Fenrir de Deus da Destruição. Isso é atribuído às profecias agourentas que diziam que Fenrir colocaria todo o cosmos na chama do sangue e da guerra e que ele mataria também Odin, o pai de todos.`
     }
     function tyr() {
+        personagem = 2
         nome_persona.innerHTML = 'TYR'
         animacao.innerHTML = `Tyr é filho do gigante Hymir. Sendo um Deus do Aesir, é um dos deuses que residiam em Asgard e próximo às lutas. Assim, Tyr é o deus do combate, da guerra, da coragem, do céu, da luz, dos juramentos e patrono da justiça.<br>
 
@@ -266,19 +277,19 @@ Odin é o maior Deus das Guerras e considerado o pai de todos os deuses. Com iss
 
 Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos viquingues – período de exploração e colonização dos escandinavos na Europa e nas Ilhas do Atlântico Norte até o século XI.`
     }
-    const openModalButton1 = document.querySelector("#open-modal1");
-    const openModalButton2 = document.querySelector("#open-modal2");
-    const openModalButton3 = document.querySelector("#open-modal3");
-    const openModalButton4 = document.querySelector("#open-modal4");
-    const openModalButton5 = document.querySelector("#open-modal5");
-    const openModalButton6 = document.querySelector("#open-modal6");
-    const openModalButton7 = document.querySelector("#open-modal7");
-    const openModalButton8 = document.querySelector("#open-modal8");
-    const closeModalButton = document.querySelector("#close-modal");
-    const modal = document.querySelector("#modal");
-    const fade = document.querySelector("#fade");
+    var openModalButton1 = document.querySelector("#open-modal1");
+    var openModalButton2 = document.querySelector("#open-modal2");
+    var openModalButton3 = document.querySelector("#open-modal3");
+    var openModalButton4 = document.querySelector("#open-modal4");
+    var openModalButton5 = document.querySelector("#open-modal5");
+    var openModalButton6 = document.querySelector("#open-modal6");
+    var openModalButton7 = document.querySelector("#open-modal7");
+    var openModalButton8 = document.querySelector("#open-modal8");
+    var closeModalButton = document.querySelector("#close-modal");
+    var modal = document.querySelector("#modal");
+    var fade = document.querySelector("#fade");
 
-    const toggleModal = () => {
+    var toggleModal = () => {
         modal.classList.toggle("hide");
         fade.classList.toggle("hide");
     };
@@ -287,6 +298,71 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
         el.addEventListener("click", () => toggleModal());
     });
 
+    
+    
+    // function like(){
+    //     like1.style.display= 'none'
+      
+    //     ok.style.display= 'block'
+    //     voto = true
+    //     if(voto){
+    //             atualizar()
+    //     }
+    // }
  
+    function atualizar() {
+        like1.style.display= 'none'
+      
+        ok.style.display= 'block'
+       
+       
+       //Recupere o valor da nova input pelo nome do id
+       // Agora vá para o método fetch logo abaixo
+      var votook = personagem
+      if(votook == undefined){
+      console.log("chega?")
+    }else{
 
+    
+       // Enviando o valor da nova input
+       fetch("/usuarios/atualizar", {
+        
+           method: "POST",
+           headers: {
+               "Content-Type": "application/json"
+           },
+           
+           body: JSON.stringify({
+               // crie um atributo que recebe o valor recuperado aqui
+               // Agora vá para o arquivo routes/usuario.js
+              idpersona: votook,
+              
+           })
+       }).then(function (resposta) {
+
+           console.log("resposta: ", resposta);
+
+           if (resposta.ok) {
+               cardErro.style.display = "block";
+
+              alert("voto feito")
+
+               setTimeout(() => {
+                   window.location = "./mitologia_nordica.html";
+               }, "2000")
+               
+               limparFormulario();
+              
+           } else {
+               throw ("Houve um erro ao tentar realizar o voto!");
+           }
+       }).catch(function (resposta) {
+           console.log(`#ERRO: ${resposta}`);
+          
+       });
+
+       return false;
+       console.log("passa")
+   }
+}
 </script>
