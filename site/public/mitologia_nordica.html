@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body >
+<body onload="validarSessao()">
     <header>
         <div class="container">
             <H1>LOGIAGAME</H1>-
@@ -309,60 +309,43 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
     //             atualizar()
     //     }
     // }
- 
+    var personagem = 0
     function atualizar() {
         like1.style.display= 'none'
       
         ok.style.display= 'block'
        
-       
+       console.log(personagem)
        //Recupere o valor da nova input pelo nome do id
        // Agora vá para o método fetch logo abaixo
       var votook = personagem
+      var fk_personagem = sessionStorage.ID_USUARIO
+      console.log(fk_personagem)
       if(votook == undefined){
       console.log("chega?")
-    }else{
+    } 
+    else {
+        fetch(`/usuarios/atualizar/${votook}${fk_personagem}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            // body: JSON.stringify({
+            //     descricao: textarea_descricao.value
+            // })
+        }).then(function (resposta) {
 
-    
-       // Enviando o valor da nova input
-       fetch("/usuarios/atualizar", {
-        
-           method: "POST",
-           headers: {
-               "Content-Type": "application/json"
-           },
-           
-           body: JSON.stringify({
-               // crie um atributo que recebe o valor recuperado aqui
-               // Agora vá para o arquivo routes/usuario.js
-              idpersona: votook,
-              
-           })
-       }).then(function (resposta) {
-
-           console.log("resposta: ", resposta);
-
-           if (resposta.ok) {
-               cardErro.style.display = "block";
-
-              alert("voto feito")
-
-               setTimeout(() => {
-                   window.location = "./mitologia_nordica.html";
-               }, "2000")
-               
-               limparFormulario();
-              
-           } else {
-               throw ("Houve um erro ao tentar realizar o voto!");
-           }
-       }).catch(function (resposta) {
-           console.log(`#ERRO: ${resposta}`);
-          
-       });
-
-       return false;
-       console.log("passa")
-   }
+            if (resposta.ok) {
+                window.alert("voto atualizado");
+                window.location = "./mitologia_nordica.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar o voto" + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
 }
 </script>

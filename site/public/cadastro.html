@@ -19,7 +19,7 @@
 
 
                     <li>
-                        HOME
+                        <a href="index.html">INICIO</a>
                     </li>
                     <li>
                       <a href="login.html">login</a>
@@ -123,9 +123,9 @@
             finalizarAguardar();
             return false;
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
+        // else {
+        //     setInterval(sumirMensagem, 5000)
+        // }
         
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -147,7 +147,7 @@
             if (resposta.ok) {
                 cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                alert( "Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
                 setTimeout(() => {
                     window.location = "login.html";
@@ -160,14 +160,12 @@
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            
         });
 
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+   
 
 </script>
