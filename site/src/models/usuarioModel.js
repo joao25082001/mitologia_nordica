@@ -31,18 +31,26 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucao);
 }
 function atualizar(personagem,fk) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():");
+    console.log(`ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function atualizar():${personagem}${fk}`);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-    update personagem set qnt_votos = qnt_votos +1 where idpersona = ${personagem};
-    
-  
-    update usuario set fk_persona = ${personagem} where idusuario =  ${fk}; `
+    update personagem set qnt_votos = qnt_votos +1 where idpersona = ${personagem};`
+
+
     console.log("Executando a instrução SQL: \n" + instrucao);
+    atualizar2(personagem,fk)
+    return database.executar(instrucao); 
+    }
+function atualizar2 (personagem, fk){
+    var instrucao = `
+    update usuario set fk_persona = ${personagem} where idusuario = ${fk};`
+
     return database.executar(instrucao); 
 }
+  
+
 
 module.exports = {
     entrar,

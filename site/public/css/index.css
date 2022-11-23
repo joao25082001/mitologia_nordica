@@ -12,11 +12,15 @@ body {
   height: 100%;
   background-image: url(https://1.bp.blogspot.com/-kY20TST20tY/TqQtWnlTCXI/AAAAAAAABco/-FFU47WUqvc/s1600/109-Cell11.com.gif);
   background-repeat: no-repeat;
+  font-family: 'arcadeclassic';
   background-size: cover;
 
 
 }
-
+a{
+  color: white;
+  text-decoration: none;
+}
 header {
   height: 10vh;
   width: 100%;
