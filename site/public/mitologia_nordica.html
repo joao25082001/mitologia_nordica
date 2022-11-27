@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/nordica.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Document</title>
 </head>
 
-<body onload="validarSessao()">
+<body onload="obterDadosGraficoteste()">
     <header>
         <div class="container">
             <H1>LOGIAGAME</H1>-
             <DIV class="navbar">
                 <ul>
                     <li>
-                      OLÁ: <span id="nome"></span>
+                        OLÁ: <span id="nome"></span>
                     </li>
                     <li>
                         <a href="jogo_pintar.html">Desenhar</a>
@@ -163,7 +164,7 @@
 
                 <h3>ODIN: O pai dos deuses</h3>
             </div>
-            <div class="deus" id="open-modal8" onclick="heim()" style="height: 80px">
+            <div class="deus" id="open-modal8" onclick="guarda()" style="height: 80px">
                 <img src="assets/imgs/guarda.png" alt="">
 
                 <h3>HEIMDALL:O guardião</h3>
@@ -171,28 +172,45 @@
         </div>
 
         </div>
-        <div id="fade" class="hide" ></div>
+        <div id="fade" class="hide"></div>
         <div id="modal" class="hide">
-            <div  class="modal-header">
+            <div class="modal-header">
                 <h2 id="nome_persona">LOKI</h2>
                 <button id="close-modal">X</button>
             </div>
-            <div class="modal-body" >
+            <div class="modal-body">
                 <span id="animacao" class="a">
-               
+
                 </span>
             </div>
             <img id="like1" onclick="atualizar()" src="assets/imgs/like.jfif" alt="">
             <img id="ok" style="display: none;" src="assets/imgs/ok1.jfif" alt="">
         </div>
     </main>
+    <div class="graph">
+        <canvas id="myChart"></canvas>
+    </div>
 </body>
 
 </html>
 <script>
-//    nome_persona.innerHTML = sessionStorage.NOME_USUARIO
- nome.innerHTML = sessionStorage.NOME_USUARIO
-var personagem = 0
+    //    nome_persona.innerHTML = sessionStorage.NOME_USUARIO
+    nome.innerHTML = sessionStorage.NOME_USUARIO
+    var personagem = 0
+    console.log(sessionStorage.FK_PERSONA)
+    if(sessionStorage.FK_PERSONA == 'null'){
+        like1.style.display = 'block'
+
+ok.style.display = 'none'
+
+    }
+    else{
+        like1.style.display = 'none'
+
+ok.style.display = 'block'
+
+
+    }
     function playaudio() {
         var play = audio
         play.play()
@@ -206,11 +224,11 @@ var personagem = 0
         ativo.style.display = "block"
     }
     var voto = false
-    
+
     function sumirMensagem() {
-       cardErro.style.display = "none"
-   }
-  
+        cardErro.style.display = "none"
+    }
+
     function loki() {
         nome_persona.innerHTML = 'LOKI'
         personagem = 5
@@ -294,15 +312,15 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
         fade.classList.toggle("hide");
     };
 
-    [openModalButton1, openModalButton2,openModalButton3,openModalButton4,openModalButton5,openModalButton6,openModalButton7,openModalButton8, closeModalButton, fade].forEach((el) => {
+    [openModalButton1, openModalButton2, openModalButton3, openModalButton4, openModalButton5, openModalButton6, openModalButton7, openModalButton8, closeModalButton, fade].forEach((el) => {
         el.addEventListener("click", () => toggleModal());
     });
 
-    
-    
+
+
     // function like(){
     //     like1.style.display= 'none'
-      
+
     //     ok.style.display= 'block'
     //     voto = true
     //     if(voto){
@@ -311,41 +329,140 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
     // }
     var personagem = 3
     function atualizar() {
-        like1.style.display= 'none'
-      
-        ok.style.display= 'block'
-       
-       console.log(personagem)
-       //Recupere o valor da nova input pelo nome do id
-       // Agora vá para o método fetch logo abaixo
-      var votook = personagem
-      var fk_personagem = sessionStorage.ID_USUARIO
-      console.log(fk_personagem)
-      if(votook == undefined){
-      console.log("chega?")
-    } 
-    else {
-        fetch(`/usuarios/atualizar/${votook}${fk_personagem}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            // body: JSON.stringify({
-            //     descricao: textarea_descricao.value
-            // })
-        }).then(function (resposta) {
+        like1.style.display = 'none'
 
-            if (resposta.ok) {
-                window.alert("voto atualizado");
-               
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            } else {
-                throw ("Houve um erro ao tentar realizar o voto" + resposta.status);
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
+        ok.style.display = 'block'
+
+        console.log(personagem)
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var votook = personagem
+        var fk_personagem = sessionStorage.ID_USUARIO
+        console.log(fk_personagem)
+        if (votook == undefined) {
+            console.log("chega?")
+        }
+        else {
+            fetch(`/usuarios/atualizar/${votook}${fk_personagem}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                // body: JSON.stringify({
+                //     descricao: textarea_descricao.value
+                // })
+            }).then(function (resposta) {
+
+                if (resposta.ok) {
+                    window.alert("voto atualizado");
+            
+
+                } else if (resposta.status == 404) {
+                    window.alert("Deu 404!");
+                } else {
+                    throw ("Houve um erro ao tentar realizar o voto" + resposta.status);
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+        }
     }
-}
+
+    function obterDadosGraficoteste() {
+        // alterarTitulo(idAquario)
+
+        // if (proximaAtualizacao != undefined) {
+        //     clearTimeout(proximaAtualizacao);
+        // }
+
+        fetch(`usuarios/votos`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta);
+                });
+            } else {
+                console.log('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta) {
+        console.log('iniciando plotagem do gráfico...com ${reposta}')
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
+
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+
+            labels: labels,
+            datasets: [{
+                label: 'QUANTIDADE DE VOTOS POR DEUS',
+                data: [],
+                fill: false,
+                borderColor: ['rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)'],
+                tension: 0.1,
+                backgroundColor: ['rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)']
+
+            },
+            ]
+        };
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.nome);
+            dados.datasets[0].data.push(registro.qnt_votos);
+            // dados[0].style.backgroundColor= "red"
+            //  dados.datasets[1].data.push(registro.nome);
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets[0])
+        console.log('teste')
+
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'bar',
+            data: dados,
+
+        }
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        )
+        //  setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+    }
+
 </script>

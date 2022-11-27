@@ -22,5 +22,9 @@ router.post("/autenticar", function (req, res) {
 router.put("/atualizar/:votook:fk_personagem", function (req, res) {
     usuarioController.atualizar(req, res);
 });
+router.get("/votos", function (req, res) {
+    usuarioController.obterDadosGraficoteste(req, res);
+});
+
 
 module.exports = router;

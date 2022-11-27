@@ -101,13 +101,10 @@
 
         if (emailVar == "" || senhaVar == "") {
           
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+          
             return false;
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
+       
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -134,6 +131,7 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.idusuario;
+                    sessionStorage.FK_PERSONA = json.fk_persona;
 
                     setTimeout(function () {
                         window.location = "./mitologia_nordica.html";
