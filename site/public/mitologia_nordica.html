@@ -22,7 +22,7 @@
                     <li>
                         <a href="jogo_pintar.html">Desenhar</a>
                     </li>
-                    <li>
+                    <li onclick="limparSessao()">
                         SAIR
                     </li>
                     <li id="ativo" onclick="playaudio() " style="display:block">🔈</li>
@@ -187,12 +187,13 @@
             <img id="ok" style="display: none;" src="assets/imgs/ok1.jfif" alt="">
         </div>
     </main>
-    <div class="graph">
-        <canvas id="myChart"></canvas>
+    <div style="background-color: rgb(48, 46, 46); width: 50%;height: 50%;" class="graph">
+        <canvas  id="myChart"></canvas>
     </div>
 </body>
-
+<script src="js/funcoes.js"></script>
 </html>
+
 <script>
     //    nome_persona.innerHTML = sessionStorage.NOME_USUARIO
     nome.innerHTML = sessionStorage.NOME_USUARIO
@@ -355,6 +356,7 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
 
                 if (resposta.ok) {
                     window.alert("voto atualizado");
+                    window.location = "mitologia_nordica.html"
             
 
                 } else if (resposta.status == 404) {
@@ -408,24 +410,16 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
                 label: 'QUANTIDADE DE VOTOS POR DEUS',
                 data: [],
                 fill: false,
-                borderColor: ['rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 205, 86, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)'],
+    
                 tension: 0.1,
-                backgroundColor: ['rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 205, 86, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)']
-
+                backgroundColor: ['orange',
+                    'gray',
+                    'green',
+                    'gold',
+                    'purple',
+                    'blue',
+                    'brown',
+                    'red'],
             },
             ]
         };
@@ -455,6 +449,7 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
         const config = {
             type: 'bar',
             data: dados,
+          
 
         }
         // Adicionando gráfico criado em div na tela

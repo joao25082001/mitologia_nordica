@@ -20,7 +20,7 @@
                     <a href="mitologia_nordica.html">NORDICA</a>
                     </li>
                    
-                    <li>
+                    <li onclick="LimparSessao()">
                         SAIR
                     </li>
                     <li id="ativo" onclick="playaudio() " style="display:block">🔈</li>
@@ -58,6 +58,7 @@
 </div>
 </body>
 </html>
+<script src="js/funcoes.js"></script>
 <script>
     nome.innerHTML = sessionStorage.NOME
      function playaudio() {
