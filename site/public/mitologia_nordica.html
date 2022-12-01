@@ -22,7 +22,7 @@
                     <li>
                         <a href="jogo_pintar.html">Desenhar</a>
                     </li>
-                    <li>
+                    <li onclick="limparSessao()">
                         SAIR
                     </li>
                     <li id="ativo" onclick="playaudio() " style="display:block">🔈</li>
@@ -191,8 +191,9 @@
         <canvas id="myChart"></canvas>
     </div>
 </body>
-
+<script src="js/funcoes.js"></script>
 </html>
+
 <script>
     //    nome_persona.innerHTML = sessionStorage.NOME_USUARIO
     nome.innerHTML = sessionStorage.NOME_USUARIO
@@ -407,24 +408,16 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
                 label: 'QUANTIDADE DE VOTOS POR DEUS',
                 data: [],
                 fill: false,
-                borderColor: ['rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 205, 86, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)'],
+    
                 tension: 0.1,
-                backgroundColor: ['rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 205, 86, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)']
-
+                backgroundColor: ['orange',
+                    'gray',
+                    'green',
+                    'gold',
+                    'purple',
+                    'blue',
+                    'brown',
+                    'red'],
             },
             ]
         };
@@ -454,6 +447,7 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
         const config = {
             type: 'bar',
             data: dados,
+          
 
         }
         // Adicionando gráfico criado em div na tela
