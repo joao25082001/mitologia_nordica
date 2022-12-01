@@ -187,7 +187,7 @@
             <img id="ok" style="display: none;" src="assets/imgs/ok1.jfif" alt="">
         </div>
     </main>
-    <div class="graph">
+    <div id="graph">
         <canvas id="myChart"></canvas>
     </div>
 </body>
@@ -200,14 +200,13 @@
     console.log(sessionStorage.FK_PERSONA)
     if(sessionStorage.FK_PERSONA == 'null'){
         like1.style.display = 'block'
-
-ok.style.display = 'none'
+        ok.style.display = 'none'
 
     }
     else{
         like1.style.display = 'none'
-
-ok.style.display = 'block'
+        
+        ok.style.display = 'block'
 
 
     }
@@ -330,7 +329,6 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
     var personagem = 3
     function atualizar() {
         like1.style.display = 'none'
-
         ok.style.display = 'block'
 
         console.log(personagem)
@@ -355,6 +353,7 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
 
                 if (resposta.ok) {
                     window.alert("voto atualizado");
+                    window.location= "mitologia_nordica.html"
             
 
                 } else if (resposta.status == 404) {
