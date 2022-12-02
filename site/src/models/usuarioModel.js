@@ -30,6 +30,17 @@ function cadastrar(nome, email, senha) {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+function avalie(nota,id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():");
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO nota (nota,fk_nota_usuario) VALUES ('${nota}', '${id}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 function atualizar(personagem,fk) {
     console.log(`ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function atualizar():${personagem}${fk}`);
     
@@ -52,11 +63,12 @@ function atualizar2 (personagem, fk){
 function obterDadosGraficoteste() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function obter");
     var instrucao = `
-        SELECT qnt_votos,nome FROM personagem GROUP BY nome;
+        SELECT personagem.nome as nomep,personagem.qnt_votos,usuario.* FROM personagem join usuario on fk_persona = personagem.idpersona GROUP BY personagem.nome;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+
   
 
 
@@ -65,5 +77,6 @@ module.exports = {
     cadastrar,
     listar,
     atualizar,
-    obterDadosGraficoteste
+    obterDadosGraficoteste,
+    avalie,
 };

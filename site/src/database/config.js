@@ -21,9 +21,15 @@ var sqlServerConfig = {
 var mySqlConfig = {
     host: "localhost",
     database: "mitologia",
-    user: 'aluno',
-    password: "sptech",
+    user: 'root',
+    password: "joao",
 };
+//var mySqlConfig = {
+ //   host: "localhost",
+   // database: "mitologia",
+    //user: 'aluno',
+   // password: "sptech",
+//};
 
 function executar(instrucao) {
     // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js

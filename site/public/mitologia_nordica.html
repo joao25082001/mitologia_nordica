@@ -195,11 +195,17 @@
 </html>
 
 <script>
+    
     //    nome_persona.innerHTML = sessionStorage.NOME_USUARIO
     nome.innerHTML = sessionStorage.NOME_USUARIO
     var personagem = 0
     console.log(sessionStorage.FK_PERSONA)
-    if(sessionStorage.FK_PERSONA == 'null'){
+    if(sessionStorage.FK_PERSONA == 'null'  ){
+        like1.style.display = 'block'
+        ok.style.display = 'none'
+
+    } else if(sessionStorage.DEPOIS == 'null'){
+    
         like1.style.display = 'block'
         ok.style.display = 'none'
 
@@ -354,8 +360,7 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
 
                 if (resposta.ok) {
                     window.alert("voto atualizado");
-                    window.location= "mitologia_nordica.html"
-            
+                 window.location= "mitologia_nordica.html"
 
                 } else if (resposta.status == 404) {
                     window.alert("Deu 404!");
@@ -380,8 +385,9 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
-
+                    
                     plotarGrafico(resposta);
+                    sessionStorage.FK_PERSONA = resposta.fk_personagem
                 });
             } else {
                 console.log('Nenhum dado encontrado ou erro na API');
@@ -429,7 +435,7 @@ Isso se dá por sua coragem e porque ele abriu caminho para Odin no tempo dos vi
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.nome);
+            labels.push(registro.nomep);
             dados.datasets[0].data.push(registro.qnt_votos);
             // dados[0].style.backgroundColor= "red"
             //  dados.datasets[1].data.push(registro.nome);

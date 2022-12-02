@@ -25,6 +25,14 @@ insert into personagem values
 (null,'heimdall',0);
 select * from personagem ;
 update personagem set qnt_votos = qnt_votos +1 where idpersona = 1;
-update usuario set fk_persona where idusuario = 1;
+create table nota(
+idnota int primary key auto_increment,
+nota int,
+fk_nota_usuario int, foreign key (fk_nota_usuario) references usuario(idusuario)
+);
+select * from nota;
 
 
+ SELECT personagem.nome,personagem.qnt_votos,usuario.* FROM personagem join usuario on fk_persona = personagem.idpersona GROUP BY personagem.nome;
+ SELECT* FROM personagem join usuario on fk_persona = personagem.idpersona GROUP BY personagem.nome;
+ 

@@ -20,7 +20,7 @@
                      <a href="index.html">INICIO</a>
                     </li>
                     <li>
-                       <a href="cadastro.html">ENTRAR</a>
+                       <a href="cadastro.html">CADASTRAR</a>
                     </li>
                     <li id="ativo" onclick="playaudio() " style="display:block">🔈</li>
                     <li id="pausado" onclick="pauseaudio() " style="display:none">🔊</li>
@@ -39,7 +39,7 @@
              <span class="tipo_campo">Senha:</span>
             <input id="senha_input" type="password" placeholder="******">   
 
-            <button class="btn" onclick="entrar()">Cadastrar</button>
+            <button class="btn" onclick="entrar()">Entrar</button>
         </div>
         <!-- <div id="div_aguardar" class="loading-div">
             <img src="./assets/circle-loading.gif" id="loading-gif">
@@ -83,7 +83,7 @@
 
 
 
-<audio src="assets/sons/SuperMarioBros.mp3" id="audio"></audio>
+<audio src="assets/sons/tempestate.mp3" id="audio"></audio>
 </body>
 
 </html>
@@ -92,7 +92,18 @@
 
 <script>
 
-
+function playaudio() {
+            var play = audio
+            play.play()
+            pausado.style.display = "block"
+            ativo.style.display = "none"
+        }
+        function pauseaudio() {
+            var mudo = audio
+            mudo.pause()
+            pausado.style.display = "none"
+            ativo.style.display = "block"
+        }
     function entrar() {
        
 
@@ -140,7 +151,7 @@
                 });
 
             } else {
-                    alert("usuario não cadastro")
+                    alert("usuario não cadastrado")
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {

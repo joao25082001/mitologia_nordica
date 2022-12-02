@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/pintura.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="comeca()">
     <header>
         <div class="containermenu">
             <H2>LOGIAGAME</H2>
@@ -54,16 +54,22 @@
     <img id="img6" src="assets/imgs/thor (2).png" alt="">
     <img id="img7" src="assets/imgs/odin_finalizado.png" alt="">
     <img id="img8" src="assets/imgs/guarda.png" alt="">
+
         
 </div>
+<div  id="alert1" style="height: 10%;width: 100%;font-size: 40px; display: flex; justify-content: center;align-items: center;">
+ Avalie o jogo: <input type="number" max="10" id="avaliar"> <button onclick="avalie()"> ENVIAR</button>
+ 
+</div>
 </body>
-</html>
+
 <script src="js/funcoes.js"></script>
+</html>
 <script>
     matrix = ["assets/imgs/loki.png","assets/imgs/tyr_finalizado.png","assets/imgs/balder_o_belo.png","assets/imgs/lobo_finalizado.png","assets/imgs/serpente.png","assets/imgs/thor(2).png","assets/imgs/odin_finalizado.png","assets/imgs/guarda.png"]
 
 
-    nome.innerHTML = sessionStorage.NOME
+    nome.innerHTML = sessionStorage.NOME_USUARIO
      function playaudio() {
         var play = audio
         play.play()
@@ -86,7 +92,7 @@ const resetBtn = document.querySelector('.btn')
 
 
 
-// var pincel = "mouseover"
+// var pincel = "mouseover"84=""
 
 
 function populate(size) {
@@ -121,4 +127,56 @@ resetBtn.addEventListener('click', reset)
  })
 
 populate(size)
+
+function comeca(){
+    setTimeout(() => alertteste(), 20000)
+}
+function alertteste(){
+  alert('avalie nosso jogo');
+window.location = "#alert1"
+  
+}
+
+function avalie(){
+    var nota = avaliar.value;
+    var id = sessionStorage.ID_USUARIO
+    fetch("/usuarios/jogo", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+               nota:nota,
+               id:id
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+              
+
+                alert( "Obrigado pelo feedback");   
+                alert1.style.display = "none"
+
+
+                
+          
+            } else {
+                throw ("Houve um erro ao tentar realizar a avalição!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            
+        });
+
+        return false;
+    }
+
+   
+
+
+
 </script>   

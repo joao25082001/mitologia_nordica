@@ -19,6 +19,9 @@ router.post("/cadastrar", function (req, res) {
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
+router.post("/jogo", function (req, res) {
+    usuarioController.avalie(req, res);
+})
 router.put("/atualizar/:votook:fk_personagem", function (req, res) {
     usuarioController.atualizar(req, res);
 });
